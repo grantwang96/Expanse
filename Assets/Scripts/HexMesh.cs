@@ -5,9 +5,6 @@ using System.Collections.Generic;
 [RequireComponent(typeof(MeshRenderer), typeof(MeshFilter))]
 public class HexMesh : MonoBehaviour {
 
-    List<Vector3> vertices;
-    List<int> triangles;
-
     void Awake()
     {
         // Mesh
@@ -15,8 +12,11 @@ public class HexMesh : MonoBehaviour {
         hexMesh.name = "Hex Mesh";
         MeshFilter meshFilter = GetComponent<MeshFilter>();
 
-        hexMesh.vertices = HexMetrics.corners;
+        hexMesh.vertices = HexMetrics.vertices;
         hexMesh.triangles = HexMetrics.triangles;
+        hexMesh.uv = HexMetrics.uv;
+
+        hexMesh.RecalculateNormals();
 
         meshFilter.mesh = hexMesh;
     }
