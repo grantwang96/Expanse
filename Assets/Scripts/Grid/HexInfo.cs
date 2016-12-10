@@ -16,6 +16,8 @@ public class HexInfo
 
     public Mesh localMesh;
 
+    public Vector3[] worldPos;
+
 
     //basic hexagon mesh making
     public Vector3[] vertices;
@@ -41,6 +43,7 @@ public class HexInfo
     public void Start()
     {
         MeshSetup();
+        Debug.Log(worldPosition.x);
     }
 
     /// <summary>

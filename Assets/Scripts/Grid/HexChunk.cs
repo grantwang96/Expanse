@@ -10,6 +10,9 @@ public class HexChunk : MonoBehaviour
     public Vector2 chunkSize;
     public Vector3 hexSize;
 
+    // World Position
+    Vector3[] worldPos;
+
     public Vector3[] HexPositions;
     //set by world master
     public int xSector;
