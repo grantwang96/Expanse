@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
 
-    bool over = false, cityClicked = false;
+    bool over = false, notHovering = false, cityClicked = false;
 
     public GameObject regionDropDown, cityMenu;
     private Vector3 hoverScale;
@@ -12,19 +12,21 @@ public class UI : MonoBehaviour {
     public float hoverSpeed = 7f, clickTransitionSpeed = 10f;
 
 	void Start () {
-        hoverScale = Vector3.Lerp(new Vector3(0, 0, 1), new Vector3(1,1,1), 0.5f);
+        
     }
 	
 	void Update () {
 
-        // Debug.Log(cityClicked);
+        Debug.Log(notHovering);
 
         if (over)
         {
-            regionDropDown.GetComponent<RectTransform>().localScale = Vector3.Lerp(new Vector3(0, 0, 1), new Vector3(1, 1, 1), hoverSpeed * (Time.time - hoverTime));
-        } else
+            regionDropDown.GetComponent<RectTransform>().localPosition = Vector3.Lerp(new Vector3(-874.65f, 536, 1), new Vector3(-874.65f, 331, 1), hoverSpeed * (Time.time - hoverTime));
+        }
+         
+        if (notHovering)
         {
-            regionDropDown.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 1);
+            regionDropDown.GetComponent<RectTransform>().localPosition = Vector3.Lerp(new Vector3(-874.65f, 331, 1), new Vector3(-874.65f, 536, 1), hoverSpeed * (Time.time - hoverTime));
         }
 
           CityMenu();
@@ -39,6 +41,7 @@ public class UI : MonoBehaviour {
     public void OnMouseExit()
     {
         over = false;
+        notHovering = true;
     }
 
     void OnMouseDown()
@@ -64,7 +67,6 @@ public class UI : MonoBehaviour {
         if (!cityClicked)
         {
             cityMenu.GetComponent<RectTransform>().anchoredPosition3D = Vector3.Lerp(cityPos, new Vector3(1184, 0, 1), 2 * (Time.time - (tranistionTime+5)));
-            Debug.Log(cityClicked);
         }
     }
 }
