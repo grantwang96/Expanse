@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 public class hoverMenu : MonoBehaviour {
 
-    bool over = false, notHovering = false;
+    bool over = false;
 
     public GameObject regionDropDown;
     float hoverTime, tranistionTime;
-    public float hoverSpeed = 10, clickTransitionSpeed = 10f;
+    float hoverSpeed = 10, clickTransitionSpeed = 10f;
 
     float parentX;
 
@@ -22,7 +22,7 @@ public class hoverMenu : MonoBehaviour {
             regionDropDown.GetComponent<RectTransform>().localPosition = Vector3.MoveTowards(regionDropDown.GetComponent<RectTransform>().localPosition, new Vector3(parentX, 331, 1), hoverSpeed);
         } 
 
-        if (notHovering)
+        if (!over)
         {
             regionDropDown.GetComponent<RectTransform>().localPosition = Vector3.MoveTowards(regionDropDown.GetComponent<RectTransform>().localPosition, new Vector3(parentX, 536, 1), hoverSpeed);
         }
@@ -40,6 +40,5 @@ public class hoverMenu : MonoBehaviour {
         parentX = GetComponentInParent<RectTransform>().localPosition.x;
         Debug.Log(over);
         over = false;
-        notHovering = true;
     }
 }
