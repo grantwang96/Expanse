@@ -8,7 +8,7 @@ public class UI : MonoBehaviour {
 
     public GameObject regionDropDown, cityMenu;
     float hoverTime, tranistionTime;
-    public float hoverSpeed = 7f, clickTransitionSpeed = 10f;
+    float clickTransitionSpeed = 30;
 
 	void Start () {
         
@@ -37,12 +37,12 @@ public class UI : MonoBehaviour {
         var cityPos = cityMenu.GetComponent<RectTransform>().anchoredPosition3D;
         if (cityClicked)
         {
-            cityMenu.GetComponent<RectTransform>().anchoredPosition3D = Vector3.Lerp(cityPos, new Vector3(740, 0, 1), hoverSpeed * (Time.time - tranistionTime));
+            cityMenu.GetComponent<RectTransform>().anchoredPosition3D = Vector3.MoveTowards(cityPos, new Vector3(740, 0, 1), clickTransitionSpeed);
         }
 
         if (!cityClicked)
         {
-            cityMenu.GetComponent<RectTransform>().anchoredPosition3D = Vector3.Lerp(cityPos, new Vector3(1184, 0, 1), 2 * (Time.time - (tranistionTime+5)));
+            cityMenu.GetComponent<RectTransform>().anchoredPosition3D = Vector3.MoveTowards(cityPos, new Vector3(1184, 0, 1), clickTransitionSpeed);
         }
     }
 }
