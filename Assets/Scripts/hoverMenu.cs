@@ -15,7 +15,7 @@ public class hoverMenu : MonoBehaviour {
     void Update()
     {
 
-        parentX = GetComponentInParent<RectTransform>().localPosition.x;
+        parentX = GetComponentInParent<RectTransform>().localPosition.x - 18f;
         
         if (over)
         {

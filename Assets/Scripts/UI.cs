@@ -8,7 +8,7 @@ public class UI : MonoBehaviour {
 
     public GameObject regionDropDown, cityMenu;
     float hoverTime, tranistionTime;
-    float clickTransitionSpeed = 30;
+    float clickTransitionSpeed = 40;
 
 	void Start () {
         
