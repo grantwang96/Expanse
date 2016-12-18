@@ -6,18 +6,19 @@ public class UI : MonoBehaviour {
 
     bool over = false, notHovering = false, cityClicked = false;
 
-    public GameObject regionDropDown, cityMenu;
+    public Animator _cityClicked;
+    public GameObject cityMenu;
     float hoverTime, tranistionTime;
     float clickTransitionSpeed = 40;
 
 	void Start () {
-        
+        _cityClicked = GetComponent<Animator>();
     }
 	
 	void Update () {
 
         CityMenu();
-
+        _cityClicked.SetBool("cityClicked", cityClicked);
     }
 
     void OnMouseDown()
