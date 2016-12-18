@@ -8,7 +8,7 @@ public class hoverMenu : MonoBehaviour {
 
     public GameObject regionDropDown;
     float hoverTime, tranistionTime;
-    float hoverSpeed = 10, clickTransitionSpeed = 10f;
+    float hoverSpeed = 20f;
 
     float parentX;
 

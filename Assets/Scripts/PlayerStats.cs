@@ -19,4 +19,5 @@ public class PlayerStats : MonoBehaviour {
 
     // Misc
     public int NationalPride = 1, GlobalRespect = 0;
+    public int Production = 0, productionPerTurn = 5;
 }
