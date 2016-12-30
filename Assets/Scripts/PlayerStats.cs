@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerStats : MonoBehaviour {
 
     // Gold
-    static public int Gold = 0, goldPerTurn = 1 + City.cityGold;
+    static public int Gold = 0, goldPerTurn = 2;
 
     // Science
     static public int Science = 0, sciencePerTurn = 1;
@@ -23,6 +23,6 @@ public class PlayerStats : MonoBehaviour {
 
     void Update()
     {
-
+        Debug.Log(goldPerTurn);
     }
 }
