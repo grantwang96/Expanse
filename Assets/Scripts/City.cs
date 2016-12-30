@@ -2,23 +2,12 @@
 using System.Collections;
 
 public class City : MonoBehaviour {
+    static public int cityGold = 1;
+    public int cityScience = 1;
+    public int cityProduction = 2;
 
-    public GameObject cityPreFab;
-
-	void Start () {
-	
-	}
-	
-	void Update () {
-	    if (Input.GetKeyUp(KeyCode.S))
-        {
-            FoundCity();
-        }
-	}
-
-    public void FoundCity()
+    void Update()
     {
-        Debug.Log("Founded");
-        Instantiate(cityPreFab);
+
     }
 }

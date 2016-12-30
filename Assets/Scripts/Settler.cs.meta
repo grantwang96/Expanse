@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8a32a2c2cd935d5489b07cb4437d5bcf
+timeCreated: 1482965842
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - cityPreFab: {fileID: 1000012598868658, guid: 7553597ea8a9a974887d7dc3f1899679,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
