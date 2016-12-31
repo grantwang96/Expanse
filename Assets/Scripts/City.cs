@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class City : MonoBehaviour {
-    static public int cityGold = 1;
+    public int cityGold = 1;
     static public int cityScience = 1;
     static public int cityProduction = 2;
 }

@@ -21,9 +21,4 @@ public class PlayerStats : MonoBehaviour {
     // Misc
     static public int NationalPride = 1, GlobalRespect = 0;
     static public int Production = 0, productionPerTurn = 5;
-
-    void Update()
-    {
-        Debug.Log(goldPerTurn);
-    }
 }

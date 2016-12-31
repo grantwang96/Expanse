@@ -29,5 +29,6 @@ public class Settler : MonoBehaviour {
         city.name = Name;
 
         citiesSpawned++;
+        PlayerStats.goldPerTurn += city.GetComponent<City>().cityGold;
     }
 }
