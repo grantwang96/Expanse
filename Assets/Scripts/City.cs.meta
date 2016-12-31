@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 7cba96366e2ee0a4285ecf3c75704e54
-timeCreated: 1481867293
+timeCreated: 1483205898
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cityPrefab: {fileID: 1000012598868658, guid: 7553597ea8a9a974887d7dc3f1899679,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

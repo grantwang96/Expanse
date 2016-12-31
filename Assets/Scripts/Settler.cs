@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Settler : MonoBehaviour {
 
@@ -16,12 +17,17 @@ public class Settler : MonoBehaviour {
         {
             FoundCity();
         }
+        
     }
 
     public void FoundCity()
     {
-        GameObject city = Instantiate(cityPreFab);
-        PlayerStats.goldPerTurn+= City.cityGold;
+        var citiesSpawned = CitiesManager.citiesSpawned;
 
+        GameObject city = Instantiate(cityPreFab);
+        string Name = "City: " + citiesSpawned.ToString();
+        city.name = Name;
+
+        citiesSpawned++;
     }
 }
