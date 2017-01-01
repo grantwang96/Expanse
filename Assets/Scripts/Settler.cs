@@ -30,5 +30,8 @@ public class Settler : MonoBehaviour {
 
         citiesSpawned++;
         PlayerStats.goldPerTurn += city.GetComponent<City>().cityGold;
+        PlayerStats.sciencePerTurn += city.GetComponent<City>().cityScience;
+
+        Destroy(gameObject);
     }
 }

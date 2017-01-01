@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -20,5 +21,5 @@ public class PlayerStats : MonoBehaviour {
 
     // Misc
     static public int NationalPride = 1, GlobalRespect = 0;
-    static public int Production = 0, productionPerTurn = 5;
+    static public int Production = 0, productionPerTurn = 5; 
 }
