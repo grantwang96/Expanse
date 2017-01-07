@@ -11,6 +11,5 @@ public class StatsManager : MonoBehaviour {
         gpt.text = PlayerStats.goldPerTurn.ToString() + "/Turn";
         spt.text = PlayerStats.sciencePerTurn.ToString() + "/Turn";
         Debug.Log(PlayerStats.goldPerTurn);
-
     }
 }

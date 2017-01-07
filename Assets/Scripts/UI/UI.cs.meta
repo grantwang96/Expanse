@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: f1a770a7dbbc58d4d99929a147628fa9
-timeCreated: 1481603890
+timeCreated: 1483561896
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - regionDropDown: {fileID: 1000010770999504, guid: e5a8f28766f9182478b2c437f6850cff,
-      type: 2}
+  - _cityClicked: {instanceID: 0}
   - cityMenu: {fileID: 1000011783609294, guid: 5d797ce7975904e47b9f423dbe7b2cf4, type: 2}
+  - market: {fileID: 114000011545664682, guid: 953b051ad5b4c44489e941ff72a4fa5c, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
